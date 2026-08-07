@@ -1,0 +1,2 @@
+ALTER TABLE threat_reports ALTER COLUMN city DROP NOT NULL;
+ALTER TABLE threat_reports ALTER COLUMN province DROP NOT NULL;

@@ -1,0 +1,116 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        bg: {
+          primary: '#071120',
+          secondary: '#0D1B2A',
+          elevated: '#0F2236',
+          card: '#0A1828',
+          deep: '#050E1A',
+        },
+        accent: {
+          DEFAULT: '#00FF88',
+          hover: '#00CC6A',
+          dim: 'rgba(0,255,136,0.10)',
+          faint: 'rgba(0,255,136,0.04)',
+        },
+        border: {
+          subtle: 'rgba(255,255,255,0.055)',
+          default: 'rgba(255,255,255,0.09)',
+          strong: 'rgba(255,255,255,0.14)',
+          accent: 'rgba(0,255,136,0.18)',
+        },
+        text: {
+          primary: '#FFFFFF',
+          secondary: '#A8B3CF',
+          muted: '#5A6A88',
+          dim: '#3D4F6B',
+        },
+        status: {
+          success: '#00FF88',
+          warning: '#FFC857',
+          danger: '#FF4D4D',
+          info: '#4DA8FF',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sora: ['Sora', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'Consolas', 'monospace'],
+      },
+      fontSize: {
+        '2xs': ['0.65rem', { lineHeight: '1rem' }],
+        xs: ['0.75rem', { lineHeight: '1.1rem' }],
+        sm: ['0.875rem', { lineHeight: '1.4rem' }],
+        base: ['1rem', { lineHeight: '1.6rem' }],
+        lg: ['1.125rem', { lineHeight: '1.65rem' }],
+        xl: ['1.25rem', { lineHeight: '1.6rem' }],
+        '2xl': ['1.5rem', { lineHeight: '1.4rem' }],
+        '3xl': ['1.875rem', { lineHeight: '1.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '1.15rem' }],
+        '5xl': ['3rem', { lineHeight: '1.05rem' }],
+        '6xl': ['3.75rem', { lineHeight: '1rem' }],
+        '7xl': ['4.5rem', { lineHeight: '0.97rem' }],
+        '8xl': ['6rem', { lineHeight: '0.95rem' }],
+      },
+      letterSpacing: {
+        tightest: '-0.04em',
+        tighter: '-0.03em',
+        tight: '-0.02em',
+        snug: '-0.01em',
+        normal: '0em',
+        wide: '0.04em',
+        wider: '0.08em',
+        widest: '0.12em',
+      },
+      boxShadow: {
+        'card': '0 1px 0 rgba(255,255,255,0.04) inset, 0 4px 24px rgba(0,0,0,0.35)',
+        'card-hover': '0 1px 0 rgba(255,255,255,0.06) inset, 0 8px 32px rgba(0,0,0,0.45)',
+        'accent-sm': '0 0 12px rgba(0,255,136,0.2)',
+        'accent-md': '0 0 24px rgba(0,255,136,0.18), 0 0 48px rgba(0,255,136,0.08)',
+        'accent-lg': '0 0 40px rgba(0,255,136,0.22), 0 0 80px rgba(0,255,136,0.1)',
+        'danger': '0 0 16px rgba(255,77,77,0.2)',
+        'inner-top': 'inset 0 1px 0 rgba(255,255,255,0.05)',
+        'glow-green': '0 0 0 1px rgba(0,255,136,0.2), 0 0 20px rgba(0,255,136,0.12)',
+      },
+      animation: {
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-slow': 'floatSlow 8s ease-in-out infinite',
+        'float-medium': 'floatSlow 6s ease-in-out infinite 1s',
+        'spin-slow': 'spin 10s linear infinite',
+        'ping-slow': 'ping 3s cubic-bezier(0,0,0.2,1) infinite',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+        'fade-in': 'fadeIn 0.4s ease-out forwards',
+        'scan-h': 'scanH 6s linear infinite',
+      },
+      keyframes: {
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
+          '33%': { transform: 'translateY(-12px) translateX(4px)' },
+          '66%': { transform: 'translateY(-6px) translateX(-4px)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        slideUp: {
+          from: { opacity: '0', transform: 'translateY(16px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        scanH: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(200%)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
